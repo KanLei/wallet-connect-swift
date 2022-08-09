@@ -211,6 +211,8 @@ extension WCInteractor {
                 try bnb.handleEvent(event, topic: topic, decrypted: decrypted)
             } else if WCEvent.trust.contains(event) {
                 try trust.handleEvent(event, topic: topic, decrypted: decrypted)
+            } else {
+                print("[wc]---- undefined event \(event.rawValue) ----[wc]")
             }
         }
     }
